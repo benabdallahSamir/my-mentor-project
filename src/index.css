@@ -1,11 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-light: #4a90e2; /* Bright Blue */
-  --color-primary-dark: #4a90e2; /* Bright Blue */
+  --color-primary: #4a90e2;
 
-  --color-secondary-light: #f5a623; /* Vibrant Orange */
-  --color-secondary-dark: #f5a623; /* Vibrant Orange */
+  --color-secondary: #f5a623; /* Vibrant Orange */
 
   --color-background-light: #ffffff; /* White */
   --color-background-dark: #181818; /* Very Dark Gray/Black */
