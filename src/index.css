@@ -11,11 +11,12 @@
   --color-text-light: #333333; /* Dark Gray */
   --color-text-dark: #e5e5e5; /* Light Gray */
 
-  --color-accent-light: #50e3c2; /* Turquoise */
-  --color-accent-dark: #50e3c2; /* Turquoise */
+  --color-accent: #50e3c2; /* Turquoise */
 
-  --color-link-light: #1c6dd0; /* Blue */
-  --color-link-dark: #1c6dd0; /* Blue */
+  --color-link: #1c6dd0; /* Blue */
+
+  /* media points */
+  --breakpoint-xl: 800px;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
