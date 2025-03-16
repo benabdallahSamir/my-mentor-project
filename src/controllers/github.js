@@ -2,10 +2,10 @@ import axios from "axios";
 
 const GITHUB_API_URL = "https://api.github.com";
 
-const fetchUserRepositories = async (username) => {
+const fetchUserRepositories = async () => {
   try {
     const response = await axios.get(
-      `${GITHUB_API_URL}/users/${username}/repos`
+      `${GITHUB_API_URL}/users/samirBenabdallah/repos`
     );
     const repositories = [];
     response.data.map((repo) => {
@@ -22,7 +22,7 @@ const fetchUserRepositories = async (username) => {
 function handleReposetry(repo) {
   const { homepage: livesite, name, html_url: link, description } = repo;
   if (!description) return;
-  const image = `${link}/blob/main/design/desktop-design.jpg`;
+  const image = `${link}/blob/main/design/desktop-preview.jpg?raw=true`;
   const level = description.match(/: [A-Za-z]*/)[0].substring(2);
   const language = description.match(/- .*/)[0].substring(2);
   return {
