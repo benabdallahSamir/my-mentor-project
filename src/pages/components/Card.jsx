@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import noImage from "../../../public/noImage.svg";
+import noImage from "/src/asset/noImage.svg";
 function Card({ informations, className }) {
   const { image: img, name: title } = informations;
   const navigate = useNavigate();

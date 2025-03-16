@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import frontendMentorLogo from "../../../public/frontendMentor.webp";
+import frontendMentorLogo from "/src/asset/frontendMentor.webp";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 function NavBar() {

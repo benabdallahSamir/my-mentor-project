@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import mentor from "../../public/mentorImage.svg";
-import programmer from "../../public/programmer.svg";
-import questionImage from "../../public/questionImage.svg";
+import mentor from "/src/asset/mentorImage.svg";
+import programmer from "/src/asset/programmer.svg";
+import questionImage from "/src/asset/questionImage.svg";
 import fetchUserRepositories from "../controllers/github";
 import Card from "./components/Card";
 import NavBar from "./components/NavBar";
