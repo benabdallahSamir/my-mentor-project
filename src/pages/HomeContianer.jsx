@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 function Section({ children, id, className }) {
   return (
     <section
-      className={`sticky top-0 bg-background-light dark:bg-background-dark h-[91vh] w-full ${className}`}
+      className={`sticky top-0 bg-background-light dark:bg-background-dark h-[91vh] w-[100vw] ${className}`}
       id={id}
     >
       {children}
@@ -20,7 +20,6 @@ function Section({ children, id, className }) {
 
 function HomeContianer() {
   const [projects, setProjects] = useState([]);
-  console.log(projects);
   useEffect(() => {
     fetchUserRepositories().then((data) => {
       const projectReturn = data.slice(0, 4);
@@ -111,9 +110,9 @@ function HomeContianer() {
           />
         </Section>
         {/* projects */}
-        <Section className={"flex flex-col"}>
+        <Section className={"flex flex-col max-[1000px]:h-max"}>
           <div
-            className={"grid grid-cols-4 items-center gap-2 w-full h-[300px]"}
+            className={"grid grid-cols-4 max-[1000px] items-center gap-2 w-full h-[300px] max-[1000px]:grid-cols-3 max-[1000px]:h-max max-[700px]:grid-cols-2 max-[400px]:grid-cols-1"}
           >
             {projects.map((ele) => (
               <Card className={"mx-auto"} informations={ele} key={ele.name} />
@@ -121,38 +120,10 @@ function HomeContianer() {
           </div>
           <Link
             to={"/projects"}
-            className="block mx-auto rounded-md bg-link text-text-dark w-[300px] cursor-pointer hover:bg-link/80 duration-300 max-w-[80vw] px-4 py-1 font-semibold text-center mt-10"
+            className="block mx-auto mb-5 rounded-md bg-link text-text-dark w-[300px] cursor-pointer hover:bg-link/80 duration-300 max-w-[80vw] px-4 py-1 font-semibold text-center mt-10"
           >
             show all projects
           </Link>
-          <div className="mt-auto bg-gray-500 dark:bg-background-light text-text-dark dark:text-text-light">
-            <marquee behavior="" direction="ltr">
-              <p className="mx-5 text-3xl py-2 inline-block w-1/5 text-center">
-                JavaScript
-              </p>
-              <p className="mx-5 text-3xl py-2 inline-block w-1/5 text-center">
-                intermediate
-              </p>
-              <p className="mx-5 text-3xl py-2 inline-block w-1/5 text-center">
-                html
-              </p>
-              <p className="mx-5 text-3xl py-2 inline-block w-1/5 text-center">
-                css
-              </p>
-              <p className="mx-5 text-3xl py-2 inline-block w-1/5 text-center">
-                newbie
-              </p>
-              <p className="mx-5 text-3xl py-2 inline-block w-1/5 text-center">
-                api
-              </p>
-              <p className="mx-5 text-3xl py-2 inline-block w-1/5 text-center">
-                junior
-              </p>
-              <p className="mx-5 text-3xl py-2 inline-block w-1/5 text-center">
-                mentor
-              </p>
-            </marquee>
-          </div>
         </Section>
         {/* footer */}
       </div>

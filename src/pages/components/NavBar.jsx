@@ -4,7 +4,7 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 function NavBar() {
   return (
-    <div className="h-12 py-1 flex items-center px-3 fixed top-0 z-10 w-svw">
+    <div className="h-12 py-1 flex items-center px-3 fixed top-0 z-10 w-svw bg-background-light dark:bg-background-dark">
       <img src={frontendMentorLogo} alt="frontend mentor" className="h-4/5" />
       <p className="ml-3">MyFrontendMentor</p>
       

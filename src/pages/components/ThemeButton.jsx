@@ -1,6 +1,5 @@
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
 import setTheme from "../../controllers/them";
 
 export default function ThemeButton() {
@@ -10,7 +9,7 @@ export default function ThemeButton() {
 
   return (
     <div
-      className="w-10 h-10 rounded-[50%] fixed right-2 bottom-2 "
+      className="w-10 h-10 rounded-[50%] fixed right-2 bottom-2 z-50 "
       onClick={() => clickHandler()}
     >
       <FontAwesomeIcon
