@@ -41,10 +41,18 @@ function ProjectInformations() {
           </p>
         </div>
         <div className="flex items-center justify-center my-5">
-          <a href="" className="px-3 py-1 capitalize font-[semibold] rounded bg-accent text-white mr-2">
+          <a
+            href={project.livesite}
+            target="_blank"
+            className="px-3 py-1 capitalize font-[semibold] rounded bg-accent text-white mr-2"
+          >
             live site
           </a>
-          <a href="" className="px-3 py-1 capitalize font-[semibold] rounded bg-link text-white">
+          <a
+            href={project.link}
+            target="_blank"
+            className="px-3 py-1 capitalize font-[semibold] rounded bg-link text-white"
+          >
             github repo
           </a>
         </div>
