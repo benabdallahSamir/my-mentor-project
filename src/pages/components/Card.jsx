@@ -27,7 +27,7 @@ function Card({ informations, className }) {
         src={load ? img : loadingimg}
         onLoad={onLoadImg}
         alt="project img"
-        className="w-full mb-2 rounded-md"
+        className="w-full mb-2 rounded-md max-h-1/2 object-cover"
         onError={noImageFound}
       />
       <p className="mb-2">{title.replaceAll("-", " ")}</p>
